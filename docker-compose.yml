@@ -1,0 +1,10 @@
+services:
+  school-bot:
+    build: .
+    container_name: oqdaryo_imi_bot
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./uploads:/app/uploads
+      - ./school_hr.db:/app/school_hr.db

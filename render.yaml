@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: oqdaryo-imi-vakansiya-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    autoDeploy: true
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_IDS
+        value: "1017600630"
+      - key: DIRECTOR_IDS
+        value: "1053384968"
+      - key: MANAGER_IDS
+        value: "7023277036"
+      - key: DB_NAME
+        value: "school_hr.db"
